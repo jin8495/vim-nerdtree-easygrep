@@ -24,8 +24,8 @@ function! NERDTreeGrep()
     "use the previous window to jump to the first search result
     wincmd w
 
-    exec 'GrepRoot ' . dirnode.path.str()
+    let g:EasyGrepRoot = dirnode.path.str()
     exec 'Grep -r ' . pattern
-    exec 'GrepRoot ' . rootnode.path.str()
+    let g:EasyGrepRoot = rootnode.path.str()
 
 endfunction
